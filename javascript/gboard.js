@@ -23,9 +23,13 @@
     'eggjs',
     'cnpm',
     'node-modules',
-    'ali-sdk',
+    'jshttp',
     'repo-utils',
-    'koajs'
+    'koajs',
+    'ali-sdk',
+    'alibaba',
+    'alipay',
+    'aliyun'
   ];
   orgs.forEach(orgs => {
     var url = `//api.github.com/orgs/${orgs}/events?page=1&per_page=50`;
@@ -47,7 +51,7 @@
       data.forEach(item => {
         var url = item.repo.url || '';
         html += `
-          <li title="${item.repo.name}" class="">
+          <li title="${item.repo.name}">
             <a href="${url.replace('api.', '').replace('/repos', '')}">
               ${item.repo.name.split('/')[1]}
             </a>
