@@ -23,6 +23,7 @@
     'eggjs',
     'cnpm',
     'node-modules',
+    'component',
     'jshttp',
     'repo-utils',
     'koajs',
